@@ -22,3 +22,6 @@ Have "fun" :)
 	using recursion. despite the fact that fib is much easier to code and understand using recursion it was not as simple
 	when it came to suming even terms. In the end I used a while loop. Another interesting point was that f(n-1) was more 
 	than enough to check to see if the term limit was reached since f(n-2) will always be behind it.
+	--
+	After Feedback from Techy, I made some minor changes to the code and added comments. I tried to find a recursive solution
+	to the problem but sadly could not find one that worked. I will return to this at a later date.

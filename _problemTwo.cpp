@@ -6,28 +6,38 @@
 
 /// By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even - valued terms.
 
-int problemTwo(int aNumber)
+
+/*
+Techy's Feedback:
+
+some points for improvement:
+-term1 will always be >= to term2, so you don't need to check both term1 and term2 against TERM_LIMIT, 
+	just checking term1 will be fine
+- some comments would make your code clearer
+- the comment I made about aNumber
+- your TERM_LIMIT check could be part of the while condition, simplifying the code a bit
+*/
+
+
+int problemTwo()
 {
 	int term1 = 1;
 	int term2 = 0;
 	int temp;
-	int const TERM_LIMIT = 4000000;
+	const int TERM_LIMIT = 4000000;
 	int sum = 0;
 
-	while (aNumber >= 0)
+	// loop until the term limit of 4 million
+	// is reached by the first fib term.
+	while (term1 <= TERM_LIMIT)
 	{
-		if (term1 >= TERM_LIMIT || term2 >= TERM_LIMIT)
-		{
-			return sum;
-		}
-		if (term1 % 2 == 0)
-		{
-			sum += term1;
-		}
+		// Check to see if term is even, if so add it to sum.
+		if (term1 % 2 == 0)		sum += term1;
 
+		// calculate the fib of the next loop
 		temp = term1;
 		term1 = term1 + term2;
 		term2 = temp;
-		aNumber--;
 	}
+	return sum;
 }
