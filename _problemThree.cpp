@@ -1,0 +1,65 @@
+#include <vector>;
+#include <math.h>;
+#include <ostream>;
+using namespace std;
+
+/*
+	Problem 3: Largest Prime Factor
+	The prime factors of 13195 are 5, 7, 13 and 29.
+	What is the largest prime factor of the number 600851475143 ?
+*/
+
+
+// Step one -> Find all the factors of a given number
+vector<int> findFactor(long long int aNumber)
+{
+/*
+	function finds all the factors of a given number.
+	input > aNumber - potentially very large int.
+	output > an int vector of all the factors of aNumber
+*/
+	vector<int> factors;
+	for (size_t i = 1; i <= sqrt(aNumber); ++i)
+	{
+		if (aNumber % i == 0) {
+			factors.push_back(i);
+		}
+	}
+	return factors;
+};
+
+// Step Two -> Check which factors are prime.
+bool isPrime(long long int aFactor)
+{
+/*
+	function checks to see if a number passed in is prime.
+	input > aFactor: large int 
+	output > boolean true if aFactor is prime, false otherwise.
+*/
+	vector<int> theFactors = findFactor(aFactor);
+	if (theFactors.size() == 1) {
+		return true;
+	}
+	return false;
+}
+
+// Step Three -> Find the largest prime factor of 'theNumber'.
+int largestPrimeFactor(long long int theNumber)
+{
+/*
+	function returns the largest prime factor of a given number.
+	input > theNumber: large int
+	output > int 
+*/
+	int largestPrime = 0;
+	vector<int> allFactors = findFactor(theNumber);
+	for (size_t i = 0; i < allFactors.size(); ++i)
+	{
+
+		if (isPrime(allFactors[i]))
+		{
+			largestPrime = allFactors[i];
+		}
+	};
+	return largestPrime;
+}
