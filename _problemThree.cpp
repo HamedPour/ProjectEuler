@@ -1,5 +1,5 @@
-#include <vector>;
-#include <math.h>;
+#include <vector>
+#include <math.h>
 using namespace std;
 
 /*
@@ -10,12 +10,12 @@ using namespace std;
 
 
 // Step one -> Find all the factors of a given number
-vector<int> findFactor(uint64_t aNumber)
+vector<int> findFactors(uint64_t aNumber)
 {
 /*
-	function finds all the factors of a given number.
-	input > aNumber - potentially very large int.
-	output > an int vector of all the factors of aNumber
+	function finds positive factors of aNumber after 2 and excluding itself.
+	input > aNumber - potentially very large int. (long long)
+	output > an int vector of all the positve factors of aNumber above 2 and excluding itself.
 */
 	vector<int> factors;
 	for (size_t i = 1; i <= sqrt(aNumber); ++i)
@@ -35,11 +35,8 @@ bool isPrime(uint64_t aFactor)
 	input > aFactor: large int 
 	output > boolean true if aFactor is prime, false otherwise.
 */
-	const vector<int> theFactors = findFactor(aFactor);
-	if (theFactors.size() == 1) {
-		return true;
-	}
-	return false;
+	const vector<int> theFactors = findFactors(aFactor);
+	return theFactors.size() == 1;
 }
 
 // Step Three -> Find the largest prime factor of 'theNumber'.
@@ -50,16 +47,17 @@ int largestPrimeFactor(uint64_t theNumber)
 	input > theNumber: large int
 	output > int 
 */
-	int largestPrime = 0;
-	vector<int> allFactors = findFactor(theNumber);
-	for (size_t i = 0; i < allFactors.size(); ++i)
-	{
+	int largestPrime = 2;
+	vector<int> allFactors = findFactors(theNumber);
 
-		if (isPrime(allFactors[i]))
+	for (int aFactor : allFactors)
+	{
+		if (isPrime(aFactor))
 		{
-			largestPrime = allFactors[i];
+			largestPrime = aFactor;
 		}
-	};
+
+	}
 	return largestPrime;
 }
 

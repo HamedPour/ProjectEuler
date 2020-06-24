@@ -1,4 +1,5 @@
 #include <iostream>
+#include <chrono>
 
 // I'll link the problems like this for now. Later give them a proper header file.
 // int problemOne();
@@ -7,5 +8,11 @@ int largestPrimeFactor(uint64_t theNumber);
 
 int main()
 {
+
+	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 	std::cout << largestPrimeFactor(600851475143) << std::endl;
+	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+
+	std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() << "[mircos]" << std::endl;
+	std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count() << "[nanos]" << std::endl;
 }
