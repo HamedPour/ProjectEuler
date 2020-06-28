@@ -27,5 +27,8 @@
     <ClCompile Include="_problemThree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="_problemFour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

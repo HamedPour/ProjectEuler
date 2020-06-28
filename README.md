@@ -28,3 +28,6 @@ Have "fun" :)
 
 1. Problem Three was rather difficult. It took a good few days. The biggest challenge was trying to optimise prime factorisation. 
 	In the end I had to consult a few stack-overflow posts in order to crack it.  
+
+1. Problem four was a walk in the park compared to the previous problem. The only minor challenge I faced was in dealing with
+	C++ strings and string methods in order to find the palindrome correclty for a six digit number.
