@@ -31,3 +31,5 @@ Have "fun" :)
 
 1. Problem four was a walk in the park compared to the previous problem. The only minor challenge I faced was in dealing with
 	C++ strings and string methods in order to find the palindrome correclty for a six digit number.
+	Update: I decided to use a single string with a for loop to find the palindrome instead. It readys much nicer and has better
+	performance.

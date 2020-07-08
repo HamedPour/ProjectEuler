@@ -221,6 +221,11 @@ vc_hdrs.h
 .bzr/
 .bzrignore
 
+# C++ compiler and filter
+.vcxproj
+.vcxproj.filters
+
+
 ##### CVS
 /CVS/*
 **/CVS/*

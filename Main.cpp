@@ -6,7 +6,7 @@
 // int problemOne();
 // int problemTwo();
 // int largestPrimeFactor(uint64_t theNumber); // Problem three
-uint32_t largestPalindromeProduct();
+// uint32_t largestPalindromeProduct();
 
 int main()
 {
@@ -14,7 +14,7 @@ int main()
 
 
 
-	std::cout << largestPalindromeProduct() << std::endl;
+//	std::cout << largestPalindromeProduct() << std::endl;
 	
 
 	
