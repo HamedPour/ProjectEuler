@@ -7,14 +7,13 @@
 // int problemTwo();
 // int largestPrimeFactor(uint64_t theNumber); // Problem three
 // uint32_t largestPalindromeProduct();
+int smallestDivisibleNumber1to20();
 
 int main()
 {
 	std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
-
-
-//	std::cout << largestPalindromeProduct() << std::endl;
+	std::cout << smallestDivisibleNumber1to20() << std::endl;
 	
 
 	

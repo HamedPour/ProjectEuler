@@ -33,3 +33,8 @@ Have "fun" :)
 	C++ strings and string methods in order to find the palindrome correclty for a six digit number.
 	Update: I decided to use a single string with a for loop to find the palindrome instead. It readys much nicer and has better
 	performance.
+
+1. This question "What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?" seemsed very
+	simple at first but then it took around 12 seconds to complete. Optimisation took some time figuring out. In the end the trick
+	to understand that any number that the answer would be much always be divisible by 20. This way instead of checking each number
+	one by one we can check 20 at a time. It brings computation time down to 480000 micro seconds. 
